@@ -22,7 +22,7 @@ local function toggle_blame()
 end
 
 -- Keymaps
-vim.keymap.set("n", "<leader>gt", toggle_blame, { desc = "Toggle Git Line Blame" })
+vim.keymap.set("n", "<leader>gt", toggle_blame, { desc = "Toggle Line Blame" })
 
 -- Logpoint config
 local dap = require("dap")
