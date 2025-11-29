@@ -51,7 +51,7 @@ return {
     }
 
     for _, button in ipairs(opts.config.center) do
-      button.desc = button.desc .. string.rep(" ", 43 - #button.desc)
+      button.desc = button.desc .. string.rep(" ", 60 - #button.desc)
       button.key_format = "  %s"
     end
 
