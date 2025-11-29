@@ -23,8 +23,11 @@ local Snacks = require("snacks")
 ---------------------------------             GITSIGNS BLAME TOGGLE             ---------------------------------
 -----------------------------------------------------------------------------------------------------------------
 
--- Track blame state manually
-local blame_enabled = false
+-- Start with blame enabled
+local blame_enabled = true
+
+-- Enable blame immediately when this file loads
+gitsigns.toggle_current_line_blame(true)
 
 Snacks.toggle
   .option("git_blame", {
