@@ -23,3 +23,9 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
     end, 20)
   end,
 })
+
+-- Auto-save on buffer change, focus lost, or leaving insert mode
+vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "WinLeave", "InsertLeave" }, {
+  pattern = "*",
+  command = "silent! update",
+})
