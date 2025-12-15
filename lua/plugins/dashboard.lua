@@ -9,7 +9,7 @@ return {
     dashboard = {
       enabled = true,
 
-      width = 60,
+      width = 100, -- adjust so logo, onefetch, and keys align
       row = nil,
       col = nil,
       pane_gap = 4,
@@ -61,16 +61,14 @@ return {
       },
 
       sections = {
-
         {
           section = "terminal",
-          cmd = "pokemon-colorscripts -r --no-title; sleep .1",
+          cmd = "~/.config/nvim/lua/config/dashboard-terminal.sh",
           random = 10,
-          pane = 1,
-          indent = 10,
-          height = 15,
+          pane = 2,
+          indent = 5,
+          height = 45,
         },
-
         { section = "header" },
         { section = "keys", gap = 1, padding = 1 },
         { section = "startup" },
