@@ -9,7 +9,7 @@ return {
     dashboard = {
       enabled = true,
 
-      width = 100, -- adjust so logo, onefetch, and keys align
+      width = 60, -- adjust so logo, onefetch, and keys align
       row = nil,
       col = nil,
       pane_gap = 4,
@@ -61,14 +61,6 @@ return {
       },
 
       sections = {
-        {
-          section = "terminal",
-          cmd = "~/.config/nvim/lua/config/dashboard-terminal.sh",
-          random = 10,
-          pane = 2,
-          indent = 5,
-          height = 45,
-        },
         { section = "header" },
         { section = "keys", gap = 1, padding = 1 },
         { section = "startup" },
