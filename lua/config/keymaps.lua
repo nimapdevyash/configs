@@ -88,6 +88,15 @@ Snacks.toggle
 ---------------------------------              ADDITIONAL KEYMAPS               ---------------------------------
 -----------------------------------------------------------------------------------------------------------------
 
--- Add more custom keymaps below this line
--- Example:
--- vim.keymap.set("n", "<leader>xx", "<cmd>SomeCommand<cr>", { desc = "Description" })
+local typos_active = false
+
+vim.keymap.set("n", "<leader>tt", function()
+  if typos_active then
+    vim.cmd("LspStop typos_lsp")
+    print("Typos LSP stopped")
+  else
+    vim.cmd("LspStart typos_lsp")
+    print("Typos LSP started")
+  end
+  typos_active = not typos_active
+end, { desc = "Toggle Typos LSP" })
